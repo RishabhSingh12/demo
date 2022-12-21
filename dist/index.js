@@ -12,35 +12,29 @@ console.log("typescript is here");
 // }
 // 2nd way
 class User {
-    constructor(email, name) {
-        this.email = email;
-        this.name = name;
-        this._count = 1;
-        (this.email = email), (this.name = name);
-    }
-    getEmail() {
-        return this.email;
-    }
-    get Count() {
-        return this._count;
-    }
-    set Count(value) {
-        this._count = value;
-    }
+  constructor(email, name) {
+    this.email = email;
+    this.name = name;
+    this._count = 1;
+    (this.email = email), (this.name = name);
+  }
+  getEmail() {
+    return this.email;
+  }
+  get Count() {
+    return this._count;
+  }
+  set Count(value) {
+    this._count = value;
+  }
 }
 class SubUser extends User {
-    constructor() {
-        super(...arguments);
-        this.isFamily = true;
-        // changeCount(){
-        //     this._count = 4
-        // }
-    }
+  constructor() {
+    super(...arguments);
+    this.isFamily = true;
+    // changeCount(){
+    //     this._count = 4
+    // }
+  }
 }
-class Instagram {
-    constructor(cameraMode, filter, burst) {
-        this.cameraMode = cameraMode;
-        this.filter = filter;
-        this.burst = burst;
-    }
-}
+class Instagram extends Camera {}
